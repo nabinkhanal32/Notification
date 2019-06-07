@@ -23,7 +23,7 @@ public class CreateChannel {
             channel1.setDescription("This is channel 1");
 
             NotificationChannel channel2 = new NotificationChannel(
-                    CHANNEL_2,"Channel2", NotificationManager.IMPORTANCE_LOW
+                    CHANNEL_2,"Channel2", NotificationManager.IMPORTANCE_HIGH
             );
             channel2.setDescription("This is channel 2");
 

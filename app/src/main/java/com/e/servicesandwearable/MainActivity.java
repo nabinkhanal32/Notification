@@ -1,6 +1,7 @@
 package com.e.servicesandwearable;
 
 
+import android.app.Notification;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
@@ -39,25 +40,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void DisplayNotification(){
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CreateChannel.CHANNEL_1)
+        Notification builder = new NotificationCompat.Builder(this,CreateChannel.CHANNEL_1)
                 .setSmallIcon(R.drawable.ic_chat_black_24dp)
                 .setContentTitle("First Message")
                 .setContentText("This is my first message")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
-        notificationManagerCompat.notify(1,builder.build());
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE).build();
+        notificationManagerCompat.notify(1,builder);
 
     }
 
 
     private void DisplayNotification2(){
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CreateChannel.CHANNEL_2)
+        Notification builder = new NotificationCompat.Builder(this,CreateChannel.CHANNEL_2)
                 .setSmallIcon(R.drawable.ic_chat_black_24dp)
                 .setContentTitle("Second Message")
                 .setContentText("This is my Second message")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
-        notificationManagerCompat.notify(2,builder.build());
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE).build();
+        notificationManagerCompat.notify(2,builder);
 
     }
 }
