@@ -9,7 +9,7 @@ import android.os.Bundle;
 import app.BroadcastReceiverExample;
 
 public class BroadcastActivity extends AppCompatActivity {
-    BroadcastReceiverExample broadcastReceiverExample = new BroadcastReceiverExample();
+    BroadcastReceiverExample broadcastReceiverExample = new BroadcastReceiverExample(this);
 
 
     @Override
